@@ -6,6 +6,7 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -112,8 +113,12 @@ export default {
     onTimeDelivery: 'On-Time Delivery',
     itemsCount: '{count} items',
     quantity: 'Qty',
+    submittedOrders: 'Submitted Restocking Orders',
+    noSubmittedOrders: 'No restocking orders have been submitted yet.',
     table: {
       orderNumber: 'Order Number',
+      leadTime: 'Lead Time',
+      submittedDate: 'Submitted',
       orderId: 'Order ID',
       orderDate: 'Order Date',
       date: 'Date',
@@ -188,6 +193,38 @@ export default {
     }
   },
 
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Set a budget and restock the items your forecast says you will run short of',
+    availableBudget: 'Available Budget',
+    totalCost: 'Total Cost',
+    remainingBudget: 'Remaining',
+    itemsRecommended: 'Items Recommended',
+    recommendedItems: 'Recommended Restocking',
+    budgetHelp: 'Drag to set how much you can spend. Recommendations update instantly.',
+    placeOrder: 'Place Order',
+    placingOrder: 'Placing Order...',
+    orderPlaced: 'Restocking order {orderNumber} submitted. View it in the Orders tab.',
+    orderFailed: 'Failed to place restocking order',
+    noCandidates: 'No items need restocking for the current filters.',
+    budgetTooLow: 'No items fit within this budget. Increase the budget to see recommendations.',
+    skippedItems: '{count} item(s) did not fit within the budget',
+    leadTimeDays: '{days} days',
+    fullRestockCost: 'Full restock costs {amount}',
+    table: {
+      sku: 'SKU',
+      itemName: 'Item Name',
+      category: 'Category',
+      currentStock: 'Current Stock',
+      forecastedDemand: 'Forecasted Demand',
+      recommendedQty: 'Recommended Qty',
+      unitCost: 'Unit Cost',
+      lineTotal: 'Line Total',
+      leadTime: 'Lead Time'
+    }
+  },
+
   // Filters
   filters: {
     timePeriod: 'Time Period',
@@ -206,7 +243,8 @@ export default {
     backordered: 'Backordered',
     inStock: 'In Stock',
     lowStock: 'Low Stock',
-    adequate: 'Adequate'
+    adequate: 'Adequate',
+    submitted: 'Submitted'
   },
 
   // Trends

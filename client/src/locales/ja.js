@@ -6,6 +6,7 @@ export default {
     orders: '注文',
     finance: '財務',
     demandForecast: '需要予測',
+    restocking: '補充',
     companyName: '触媒コンポーネンツ',
     subtitle: '在庫管理システム'
   },
@@ -112,8 +113,12 @@ export default {
     onTimeDelivery: '定時配達',
     itemsCount: '{count}件',
     quantity: '数量',
+    submittedOrders: '発注済み補充注文',
+    noSubmittedOrders: '補充注文はまだ発注されていません。',
     table: {
       orderNumber: '注文番号',
+      leadTime: 'リードタイム',
+      submittedDate: '発注日',
       orderId: '注文ID',
       orderDate: '注文日',
       date: '日付',
@@ -188,6 +193,38 @@ export default {
     }
   },
 
+  // Restocking
+  restocking: {
+    title: '補充',
+    description: '予算を設定し、需要予測で不足が見込まれる品目を補充します',
+    availableBudget: '利用可能予算',
+    totalCost: '合計金額',
+    remainingBudget: '残額',
+    itemsRecommended: '推奨品目数',
+    recommendedItems: '推奨補充リスト',
+    budgetHelp: 'スライダーで予算を設定してください。推奨内容は即座に更新されます。',
+    placeOrder: '発注する',
+    placingOrder: '発注中...',
+    orderPlaced: '補充注文 {orderNumber} を発注しました。注文タブで確認できます。',
+    orderFailed: '補充注文の発注に失敗しました',
+    noCandidates: '現在のフィルタでは補充が必要な品目はありません。',
+    budgetTooLow: 'この予算では発注できる品目がありません。予算を増やしてください。',
+    skippedItems: '{count}件の品目が予算に収まりませんでした',
+    leadTimeDays: '{days}日',
+    fullRestockCost: '全品目の補充には {amount} かかります',
+    table: {
+      sku: 'SKU',
+      itemName: '品名',
+      category: 'カテゴリ',
+      currentStock: '現在庫',
+      forecastedDemand: '予測需要',
+      recommendedQty: '推奨数量',
+      unitCost: '単価',
+      lineTotal: '小計',
+      leadTime: 'リードタイム'
+    }
+  },
+
   // Filters
   filters: {
     timePeriod: '期間',
@@ -206,7 +243,8 @@ export default {
     backordered: 'バックオーダー',
     inStock: '在庫あり',
     lowStock: '在庫僅少',
-    adequate: '適量'
+    adequate: '適量',
+    submitted: '発注済み'
   },
 
   // Trends
@@ -328,6 +366,14 @@ export default {
 
   // Product Names
   productNames: {
+    'Industrial Widget Type A': '工業用ウィジェット タイプA',
+    'Steel Bearing Assembly': 'スチールベアリング組立',
+    'High-Temperature Gasket': '高温用ガスケット',
+    'Electric Motor 5HP': '電動モーター 5HP',
+    'Oil Filter Cartridge': 'オイルフィルターカートリッジ',
+    'Pressure Relief Valve': '圧力逃がし弁',
+    'Industrial Temperature Sensor Module': '工業用温度センサーモジュール',
+    'Logic Controller Board': 'ロジックコントローラーボード',
     'Single Layer PCB Assembly': '単層PCB組立',
     'Dual Layer PCB Assembly': '二層PCB組立',
     'Multi Layer PCB Assembly': '多層PCB組立',
