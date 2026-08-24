@@ -14,7 +14,9 @@ DATA_DIR = os.path.join(BASE_DIR, 'data')
 def load_json_file(filename):
     """Load data from a JSON file in the data directory"""
     filepath = os.path.join(DATA_DIR, filename)
-    with open(filepath, 'r') as f:
+    # Explicit UTF-8: Python otherwise uses the locale encoding (cp1252 on Windows),
+    # which mangles non-ASCII product names like "±15V" into "Â±15V".
+    with open(filepath, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 # Load all datasets from JSON files
@@ -34,6 +36,16 @@ recent_transactions = load_json_file('transactions.json')
 
 # Load purchase orders
 purchase_orders = load_json_file('purchase_orders.json')
+
+# Load restocking orders
+# Seeded empty; the API appends to this list at runtime. Appends are never written
+# back to disk, so submitted restocking orders reset when the server restarts.
+restocking_orders = load_json_file('restocking_orders.json')
+
+# Load user tasks
+# Seeded empty; the API appends to this list at runtime. Appends are never written
+# back to disk, so tasks created through the UI reset when the server restarts.
+tasks = load_json_file('tasks.json')
 
 # All data is now loaded from JSON files in the data/ directory
 # This allows for easier maintenance and updates of the sample data

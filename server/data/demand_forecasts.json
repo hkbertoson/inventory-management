@@ -65,7 +65,7 @@
   {
     "id": "8",
     "item_sku": "SNR-420",
-    "item_name": "Temperature Sensor Module",
+    "item_name": "Industrial Temperature Sensor Module",
     "current_demand": 180,
     "forecasted_demand": 182,
     "trend": "stable",
